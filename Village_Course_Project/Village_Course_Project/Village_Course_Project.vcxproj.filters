@@ -18,5 +18,31 @@
     <ClCompile Include="Village_Course_Project.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Peasant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Rebel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Village.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Person.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Peasant.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rebel.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Village.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
