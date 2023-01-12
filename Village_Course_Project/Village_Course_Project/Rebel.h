@@ -8,7 +8,7 @@ protected:
 
 public:
 	Rebel();
-	Rebel(std::string name, int age, int harm);
+	Rebel(const std::string& name, int age, int harm);
 	~Rebel();
 
 	// copy:
@@ -20,6 +20,6 @@ public:
 	int GetHarm() const;
 
 	// toString() --> just a pring method:
-	void PrintRebel() const;
+	void Print() override;
 
 };

@@ -4,11 +4,11 @@
 
 // constructors:
 Person::Person() {
-	std::cout << "Default constructor for Person Class called" << std::endl;
-	throw std::logic_error("Empty constructor registered in Person class");
+	//std::cout << "Default constructor for Person Class called" << std::endl;
+	//throw std::logic_error("Empty constructor registered in Person class");
 }
 
-Person::Person(std::string name, int age) {
+Person::Person(const std::string& name, int age) : name(name), age(age) {
 	if (name.length() < 3 || name.length() > 30) {
 		throw std::invalid_argument("Name should be between 3 and 30 characters!");
 	}
@@ -16,7 +16,7 @@ Person::Person(std::string name, int age) {
 		throw std::invalid_argument(" Age should be 0 or positive!");
 	}
 
-	std::cout << "Custom constructor for Person Class called" << std::endl;
+	//std::cout << "Custom constructor for Person Class called" << std::endl;
 
 	this->name = name;
 	this->age = age;
@@ -26,12 +26,12 @@ Person::Person(std::string name, int age) {
 
 // copy:
 Person::Person(const Person& peasantObject) : Person(peasantObject.name, peasantObject.age) {
-	std::cout << "Person " << GetName() << " - copy constr." << std::endl;
+	//std::cout << "Person " << GetName() << " - copy constr." << std::endl;
 }
 
 // move:
 Person::Person(Person&& peasantObject) noexcept : Person(peasantObject.name, peasantObject.age) {
-	std::cout << "Person " << GetName() << " - move constr." << std::endl;
+	//std::cout << "Person " << GetName() << " - move constr." << std::endl;
 }
 
 
@@ -40,7 +40,7 @@ Person::Person(Person&& peasantObject) noexcept : Person(peasantObject.name, pea
 
 // public destructor:
 Person::~Person() {
-	std::cout << "The destructor for Person " << GetName() << " was called" << std::endl;
+	//std::cout << "The destructor for Person " << GetName() << " was called" << std::endl;
 }
 
 
@@ -55,7 +55,7 @@ int Person::GetAge() const {
 
 
 // print function:
-void Person::Print() const {
-	std::cout << "Name: " << this->GetName() << std::endl;
-	std::cout << "Age: " << this->GetAge() << std::endl;
+void Person::Print() {
+	std::cout << "Name: " << this->name << std::endl;
+	std::cout << "Age: " << this->age << std::endl;
 }

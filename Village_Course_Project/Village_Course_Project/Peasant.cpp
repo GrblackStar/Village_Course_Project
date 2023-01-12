@@ -3,11 +3,11 @@
 
 // constructors:
 Peasant::Peasant() {
-	std::cout << "Default constructor for Peasant Class called" << std::endl;
-	throw std::logic_error("Empty constructor registered in Peasant class");
+	//std::cout << "Default constructor for Peasant Class called" << std::endl;
+	//throw std::logic_error("Empty constructor registered in Peasant class");
 }
 
-Peasant::Peasant(std::string name, int age, int productivity) : Person(name, age) {
+Peasant::Peasant(const std::string& name, int age, int productivity) : Person(name, age), productivity(productivity) {
 	if (age > 110) {
 		throw std::invalid_argument("Age cannot be greater than 110!");
 	}
@@ -21,29 +21,42 @@ Peasant::Peasant(std::string name, int age, int productivity) : Person(name, age
 
 // public destructor:
 Peasant::~Peasant() {
-	std::cout << "The destructor for Peasant " << this->GetName() << " was called" << std::endl;
+	//std::cout << "The destructor for Peasant " << this->GetName() << " was called" << std::endl;
 }
 
 
 
 // Copy constructor:
 Peasant::Peasant(const Peasant& peasantObject) : Peasant(peasantObject.name, peasantObject.age, peasantObject.productivity) {
-	std::cout << "Peasant " << GetName() << " - copy constr." << std::endl;
+	//std::cout << "Peasant " << GetName() << " - copy constr." << std::endl;
 }
 
 // Move constructor:
 Peasant::Peasant(Peasant&& peasantObject) noexcept : Peasant(peasantObject.name, peasantObject.age, peasantObject.productivity) {
-	std::cout << "Peasant " << GetName() << " - move constr." << std::endl;
+	//std::cout << "Peasant " << GetName() << " - move constr." << std::endl;
 }
 
 
 int Peasant::GetProductivity() const {
-	return productivity;
+	return this->productivity;
 }
 
 
-void Peasant::PrintPeasant() const{
-	std::cout << "Name: " << this->GetName() << std::endl;
-	std::cout << "Age: " << this->GetAge() << std::endl;
-	std::cout << "Productivity: " << this->GetProductivity() << std::endl;
+void Peasant::Print() {
+	Person::Print();
+	std::cout << "Productivity: " << this->productivity << std::endl;
+}
+
+
+
+Peasant& Peasant::operator=(const Peasant& peasantObject) {
+	if (this == &peasantObject) {
+		return *this;
+	}
+
+	name = peasantObject.name;
+	age = peasantObject.age;
+	productivity = peasantObject.productivity;
+	return *this;
+
 }

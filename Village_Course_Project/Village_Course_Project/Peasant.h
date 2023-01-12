@@ -7,8 +7,10 @@ protected:
 	int productivity;
 
 public:
+	// when we initialize our own constructor, the compiler no longer will generate a default one
+	// if we still want to create objects with an empty constructor, we must declare one as default:
 	Peasant();
-	Peasant(std::string name, int age, int productivity);
+	Peasant(const std::string& name, int age, int productivity);
 	~Peasant();
 
 	// copy:
@@ -19,7 +21,10 @@ public:
 	// getters:
 	int GetProductivity() const;
 
-	// toString() --> just a pring method:
-	void PrintPeasant() const;
+	// toString() --> just a print method:
+	void Print() override;
+
+	// override '=' opperator:
+	Peasant& operator=(const Peasant& peasantObject);
 
 };

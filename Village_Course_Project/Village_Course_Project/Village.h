@@ -13,7 +13,7 @@ private:
 
 public:
 	Village();
-	Village(std::string name, std::string location, int resources, std::vector<Peasant> peasantList);
+	Village(const std::string& name, const std::string& location);
 	~Village();
 
 
@@ -22,18 +22,23 @@ public:
 	// move:
 	Village(Village&& villageObject) noexcept;
 
-
-	// getters:
-	std::string GetName() const;
-	std::string GetLocation() const;
+	std::string getName() const { return name; }
+	std::string getLocation() const { return location; }
 	int GetResources() const;
-	std::vector<Peasant> GetListPeasants();
-
+	void SetResources(int newResources);
 
 	// methods:
-	void AddPeasant(Peasant peasant);
+	// add peasant to the list:
+	void AddPeasant(const Peasant& peasant);
+	// pass a day: The method sums the productivity of the peasants of the village and adds it to the resources of the village. 
+	// Return the resources for the day:
 	int PassDay();
+	// The method removes the first N number of peasants from the vector and returns them as a result. In case there are not 
+	// enough peasants, return everyone.
 	std::vector<Peasant>  KillPeasants(int count);
-	void PrintVillage() const;
+	void Print() const;
+
+	// override '=' opperator:
+	Village& operator=(const Village& villageObject);
 
 };

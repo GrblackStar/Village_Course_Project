@@ -127,16 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Peasant.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Rebel.cpp" />
+    <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="Village.cpp" />
     <ClCompile Include="Village_Course_Project.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Peasant.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Rebel.h" />
+    <ClInclude Include="Soldier.h" />
     <ClInclude Include="Village.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

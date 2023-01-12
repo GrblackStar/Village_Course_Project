@@ -1,8 +1,8 @@
 #pragma once
-#include <string_view>
+//#include <string_view>
 #include <string>
 
-
+// Base class Person: cannot be instanciated
 class Person {
 protected:
 	std::string name;
@@ -10,8 +10,8 @@ protected:
 
 public:
 	Person();
-	Person(std::string name, int age);
-	~Person();
+	Person(const std::string& name, int age);
+	virtual ~Person();
 
 	// copy:
 	Person(const Person& personObject);
@@ -23,7 +23,7 @@ public:
 	int GetAge() const;
 
 	// toString() --> just a pring method:
-	void Print() const;
+	virtual void Print();
 
 };
 

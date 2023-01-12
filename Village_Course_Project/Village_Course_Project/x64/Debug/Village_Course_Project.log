@@ -1,18 +1,6 @@
-﻿  Village.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\string_view(13): warning STL4038: The contents of <string_view> are available only with C++17 or later.
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vector(1485,27): error C2280: 'Peasant &Peasant::operator =(const Peasant &)': attempting to reference a deleted function
-C:\Users\ThinkPad W541\Desktop\university\3rd year\5th semester\ПЕ\project\My_Task\New_Code\Village_Course_Project\Village_Course_Project\Peasant.h(25,1): message : compiler has generated 'Peasant::operator =' here
-C:\Users\ThinkPad W541\Desktop\university\3rd year\5th semester\ПЕ\project\My_Task\New_Code\Village_Course_Project\Village_Course_Project\Peasant.h(25,1): message : 'Peasant &Peasant::operator =(const Peasant &)': function was implicitly deleted because 'Peasant' has a user-defined move constructor
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vector(1561,1): message : see reference to function template instantiation 'void std::vector<Peasant,std::allocator<Peasant>>::_Assign_counted_range<Peasant*>(_Iter,const unsigned __int64)' being compiled
-          with
-          [
-              _Iter=Peasant *
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vector(1561,30): message : see reference to function template instantiation 'void std::vector<Peasant,std::allocator<Peasant>>::_Assign_counted_range<Peasant*>(_Iter,const unsigned __int64)' being compiled
-          with
-          [
-              _Iter=Peasant *
-          ]
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.34.31933\include\vector(1545,1): message : while compiling class template member function 'std::vector<Peasant,std::allocator<Peasant>> &std::vector<Peasant,std::allocator<Peasant>>::operator =(const std::vector<Peasant,std::allocator<Peasant>> &)'
-C:\Users\ThinkPad W541\Desktop\university\3rd year\5th semester\ПЕ\project\My_Task\New_Code\Village_Course_Project\Village_Course_Project\Village.cpp(24,20): message : see reference to function template instantiation 'std::vector<Peasant,std::allocator<Peasant>> &std::vector<Peasant,std::allocator<Peasant>>::operator =(const std::vector<Peasant,std::allocator<Peasant>> &)' being compiled
-C:\Users\ThinkPad W541\Desktop\university\3rd year\5th semester\ПЕ\project\My_Task\New_Code\Village_Course_Project\Village_Course_Project\Village.h(12,23): message : see reference to class template instantiation 'std::vector<Peasant,std::allocator<Peasant>>' being compiled
+﻿  Controller.cpp
+  Soldier.cpp
+  Village.cpp
+  Village_Course_Project.cpp
+  Generating Code...
+  Village_Course_Project.vcxproj -> C:\Users\ThinkPad W541\Desktop\university\3rd year\5th semester\ПЕ\project\My_Task\New_Code\Village_Course_Project\x64\Debug\Village_Course_Project.exe
